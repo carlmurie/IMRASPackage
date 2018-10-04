@@ -1,0 +1,9 @@
+configuration:
+  files:
+    alignIMRAS2.Rmd:
+      enabled: yes
+  objects:
+  - IMRAS_counts_Eset
+  - IMRAS_tpm_Eset
+  render_root:
+    tmp: '366508'

@@ -1,0 +1,106 @@
+INFO [2018-08-28 15:17:17] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 15:17:17] Processing data
+INFO [2018-08-28 15:17:17] Reading yaml configuration
+INFO [2018-08-28 15:17:17] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 15:17:17] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 15:30:12] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 15:30:12] Processing data
+INFO [2018-08-28 15:30:12] Reading yaml configuration
+INFO [2018-08-28 15:30:12] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 15:30:12] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 15:31:00] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 15:31:00] Processing data
+INFO [2018-08-28 15:31:00] Reading yaml configuration
+INFO [2018-08-28 15:31:00] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 15:31:00] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 15:31:03] 2 required data objects created by alignIMRAS2.Rmd
+INFO [2018-08-28 15:31:05] NEWS.md file not found, creating!
+INFO [2018-08-28 15:31:26] Saving to data
+INFO [2018-08-28 15:31:32] Copied documentation to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/R/IMRASPackage.R
+INFO [2018-08-28 15:31:32] Done
+INFO [2018-08-28 15:31:32] DataPackageR succeeded
+INFO [2018-08-28 15:31:32] Building documentation
+INFO [2018-08-28 15:31:35] Building package
+INFO [2018-08-28 15:39:29] Rebuilding data package documentation.
+INFO [2018-08-28 16:23:38] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 16:23:38] Processing data
+INFO [2018-08-28 16:23:38] Reading yaml configuration
+INFO [2018-08-28 16:23:38] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 16:23:38] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 16:23:40] 2 required data objects created by alignIMRAS2.Rmd
+INFO [2018-08-28 16:23:42] Processed data sets match existing data sets at version 0.1.0
+INFO [2018-08-28 16:23:42] Saving to data
+INFO [2018-08-28 16:23:48] Copied documentation to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/R/IMRASPackage.R
+INFO [2018-08-28 16:23:48] Done
+INFO [2018-08-28 16:23:48] DataPackageR succeeded
+INFO [2018-08-28 16:23:48] Building documentation
+INFO [2018-08-28 16:23:50] Building package
+INFO [2018-08-28 16:40:44] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 16:40:44] Processing data
+INFO [2018-08-28 16:40:44] Reading yaml configuration
+INFO [2018-08-28 16:40:44] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 16:40:44] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 16:40:45] 2 required data objects created by alignIMRAS2.Rmd
+INFO [2018-08-28 16:40:46] Processed data sets match existing data sets at version 0.1.0
+INFO [2018-08-28 16:40:46] Saving to data
+INFO [2018-08-28 16:40:53] Copied documentation to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/R/IMRASPackage.R
+INFO [2018-08-28 16:40:53] Done
+INFO [2018-08-28 16:40:53] DataPackageR succeeded
+INFO [2018-08-28 16:40:53] Building documentation
+INFO [2018-08-28 16:40:55] Building package
+INFO [2018-08-28 16:41:56] Rebuilding data package documentation.
+INFO [2018-08-28 16:50:54] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 16:50:54] Processing data
+INFO [2018-08-28 16:50:54] Reading yaml configuration
+INFO [2018-08-28 16:50:54] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 16:50:54] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 16:50:56] 2 required data objects created by alignIMRAS2.Rmd
+INFO [2018-08-28 16:50:57] Processed data sets match existing data sets at version 0.1.0
+INFO [2018-08-28 16:50:57] Saving to data
+INFO [2018-08-28 16:51:04] Copied documentation to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/R/IMRASPackage.R
+INFO [2018-08-28 16:51:04] Done
+INFO [2018-08-28 16:51:04] DataPackageR succeeded
+INFO [2018-08-28 16:51:04] Building documentation
+INFO [2018-08-28 16:51:06] Building package
+INFO [2018-08-28 16:59:58] Rebuilding data package documentation.
+INFO [2018-08-28 17:02:30] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-28 17:02:30] Processing data
+INFO [2018-08-28 17:02:30] Reading yaml configuration
+INFO [2018-08-28 17:02:30] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-28 17:02:30] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-28 17:02:31] 2 required data objects created by alignIMRAS2.Rmd
+INFO [2018-08-28 17:02:32] Processed data sets match existing data sets at version 0.1.0
+INFO [2018-08-28 17:02:32] Saving to data
+INFO [2018-08-28 17:02:38] Copied documentation to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/R/IMRASPackage.R
+INFO [2018-08-28 17:02:38] Done
+INFO [2018-08-28 17:02:38] DataPackageR succeeded
+INFO [2018-08-28 17:02:38] Building documentation
+INFO [2018-08-28 17:02:40] Building package
+INFO [2018-08-31 11:35:02] Logging to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/inst/extdata/Logfiles/processing.log
+INFO [2018-08-31 11:35:02] Processing data
+INFO [2018-08-31 11:35:02] Reading yaml configuration
+INFO [2018-08-31 11:35:02] Found /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+INFO [2018-08-31 11:35:02] Processing 1 of 1: /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/data-raw/alignIMRAS2.Rmd
+
+INFO [2018-08-31 11:35:18] 2 required data objects created by alignIMRAS2.Rmd
+WARN [2018-08-31 11:35:19] IMRAS_counts_Eset has changed.
+WARN [2018-08-31 11:35:19] IMRAS_tpm_Eset has changed.
+WARN [2018-08-31 11:35:19] IMRAS_counts_Eset has changed.
+WARN [2018-08-31 11:35:19] IMRAS_tpm_Eset has changed.
+WARN [2018-08-31 11:35:19] IMRAS_counts_Eset has changed.
+WARN [2018-08-31 11:35:19] IMRAS_tpm_Eset has changed.
+INFO [2018-08-31 11:35:19] NEWS.md file found, updating!
+INFO [2018-08-31 11:37:26] Data has been updated and DataVersion string incremented automatically to 0.1.1
+INFO [2018-08-31 11:37:26] Saving to data
+INFO [2018-08-31 11:37:33] Copied documentation to /shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2/package1/IMRASPackage/R/IMRASPackage.R
+INFO [2018-08-31 11:37:33] Done
+INFO [2018-08-31 11:37:33] DataPackageR succeeded
+INFO [2018-08-31 11:37:33] Building documentation
+INFO [2018-08-31 11:37:36] Building package

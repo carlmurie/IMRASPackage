@@ -1,0 +1,21 @@
+Package: IMRASPackage
+Title: Raw read counts, tpm, and phenotype information for IMRAS RNASeq
+        study
+Version: 1.0
+Authors@R: 
+    person(given = "Carl",
+           family = "Murie",
+           role = c("aut", "cre"),
+           email = "cmurie@fredhutch.org")
+Description: Contains raw read counts, transcripts per million (tpm), and metadata for the IMRAS RNASeq study. FASTQ files were aligned and quantified with kallisto.
+License: GPL(>=3.0)
+Encoding: UTF-8
+LazyData: true
+DataVersion: 0.1.1
+Roxygen: list(markdown = TRUE)
+Date: 2018-08-31
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.1.0

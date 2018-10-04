@@ -1,0 +1,145 @@
+---
+title: Alignment and Quantification of IMRAS study
+author: Carl Murie
+date: '`r Sys.Date()`'
+output:
+  knitr:::html_vignette:
+    toc: yes
+    fig_caption: yes
+vignette: >
+  %\VignetteIndexEntry{Alignment and Quantification of IMRAS study}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+#Getting started
+
+This package contains two data objects:  
+  
+1. **IMRAS_counts_Eset** - ExpressionSet containing non-normalized and unfiltered raw read counts (*assayData*) and experimental design information (*phenoData*).  
+  
+2. **IMRAS_tpm_Eset** - ExpressionSet containing unfiltered transcript per million, or tpm, (*assayData*) counts and experimental design information (*phenoData*).  
+  
+These data objects can be loaded with the data command (*data(IMRAS_counts_Eset)*).  
+  
+Each row is a gene and each column is a sample in assayData and each row is a sample and each column is a single factor describing the samples. The rows of the phenoData table map to the columns of the assayData.  
+  
+An ExpressionSet can be subsetted with standard square bracket notation such as *IMRAS_counts_Eset[1:5, 6:10]*. This will return an ExpressionSet containing only the subsetted data for both assayData and phenoData and they will retain the correct mapping between the two tables. The assayData can be extracted as a matrix with the exprs command (*exprs(IMRAS_counts_Eset)*) and the phenoData can be extracted as an AnnotatedDataFrame with the pData command (*pData(IMRAS_counts_Eset)*).
+  
+For more information on working with ExpressionSets look at the Biobase::ExpressionSet documentation.  
+
+#Phenotype information
+
+The following are definitions of each column in the phenoData table in both IMRAS_counts_Eset and IMRAS_tpm_Eset.  
+  
+Row names are the fastq sample names.  
+  
+1. Sample: fastq sample names
+2. SAMPLE.NAME: alternative name of fastq sample
+3. PID: patient ID
+4. VISIT: visit label
+5. DAY: day of visit from baseline
+6. TIME.DESP: description of visit
+7. uID: label combining PID and DAY
+8. PROTECTION: protected from malaria (P) or not protected from malaria (NP)
+9. BATCH: FASTQ files were processed in two batches (Hiseq2000 and BGI)
+10. IMMUNIZATION: sample was from immunized patient or non-immunized patient
+11. GROUP: grouping variable. In this case all subjects are in same group.
+12. INFECTION_DAY: Not applicable to this assay
+13. RACE: Not applicable to this assay
+14. SEX: M or F
+15. STUDY: IMRAS
+16. numReads: number of reads in this sample's fastq file
+17. estAvgReadLength: estimated average read length for this sample's fastq file
+18. PercentAligned: percentage of reads aligned to reference transcript index
+19. AvgSeqQuality_R1: PASS/FAIL on average quality of sequence reads for first fastq file
+20. AvgSeqQuality_R2: PASS/FAIL on average quality of sequence reads for second fastq file
+
+#Processing code
+
+265 samples of paired RNASeq fastq files. fastq files were aligned and quantified with the kallisto software and used the Ensemble GRCH38_R91 transcript reference.
+
+```{r echo=TRUE, message=FALSE, warning=TRUE, cache=FALSE}
+library(RNASeqPipelineR)
+library(data.table)
+library(Biobase)
+library(kableExtra)
+##library(magrittr)
+
+RUN_KALLISTO <- FALSE
+
+## create or load project
+PREFIX<-"/shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2"
+##createProject(project_name = "IMRAS2_RNASeq" ,path = PREFIX, load_from_immport = FALSE)
+loadProject(project_dir=PREFIX, name="IMRAS2_RNASeq")
+
+## build kallisto index if necessary
+utils_dir <- "/shared/silo_researcher/Gottardo_R/10_ref_files/Reference_Genome/Homo_sapiens/Ensembl/kallisto/"
+setGenomeReference(utils_dir, "GRCH38_R91.idx")
+
+if(RUN_KALLISTO) {
+    kallistoAlign(kallisto_threads=3, paired=TRUE, mail="cmurie@fredhutch.org",
+                  minutes_requested=1, slurm=TRUE, slurm_partition=NULL,
+                  force=TRUE,
+                  paired_pattern=c("_1.fastq", "_2.fastq"))
+
+    kallistoAssembleOutput(paired=TRUE)
+
+    runFastQC(ncores=8) 
+    kallistoAssembleQC(paired=TRUE, doAnnotation=TRUE) 
+} ## if RUN_KALLISTO
+
+## remove fastq file with no phenotype data
+outDir <- RNASeqPipelineR:::getDir("OUTPUT")
+pheno <- fread(paste0(outDir, "/kallisto_Pheno.csv"), sep=",", header=TRUE, data.table=FALSE)
+counts <- fread(paste0(outDir, "/kallisto_counts.csv"), sep=",", header=TRUE,
+                data.table=FALSE)
+tpm <- fread(paste0(outDir, "/kallisto_tpms.csv"), sep=",", header=TRUE, data.table=FALSE)
+diff <- setdiff(colnames(counts)[-1], pheno$Sample)
+
+## remove samples that are lacking phenotype information
+##counts[,diff] <- NULL
+##tpm[,diff] <- NULL
+
+## format for ExpressionSet
+rownames(pheno) <- pheno$Sample
+pheno$X <- NULL
+rownames(counts) <- counts$hgnc_symbol
+counts$hgnc_symbol=NULL
+rownames(tpm) <- tpm$hgnc_symbol
+tpm$hgnc_symbol=NULL
+
+## create and save read values and pheno information as ExpressionSet Rds objects
+IMRAS_counts_Eset <- ExpressionSet(assayData=as.matrix(counts),
+                             phenoData=AnnotatedDataFrame(pheno))
+IMRAS_tpm_Eset <- ExpressionSet(assayData=as.matrix(tpm),
+                             phenoData=AnnotatedDataFrame(pheno))
+
+```
+
+
+#Technical replicates
+Four samples from the first batch sequenced with Hiseq2000 were repeated as technical replicates in the second batch sequenced with BGI.
+
+```{r echo=FALSE, results="asis"} 
+mat <- cbind(c("CL100037161_L02_23", "CL100037161_L02_24", "CL100037161_L02_25", "CL100037161_L02_26"), c("IMRAS002.26", "IMRAS002.13", "IMRAS005.04", "IMRAS049.34"))
+colnames(mat) <- c("BGI", "Hiseq2000")
+kable(mat, align=rep("c", ncol(mat))) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"), 
+                  full_width=FALSE, position="left")
+```
+
+#List of FASTQ samples in IMRAS study
+
+```{r echo=FALSE, results="asis"}
+cat(pheno$Sample, sep="  \n")
+```
+
+#Session information
+```{r echo=FALSE}
+sessionInfo()
+```
+
+
+
+

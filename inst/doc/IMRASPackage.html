@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Carl Murie" />
+
+<meta name="date" content="2018-08-31" />
+
+<title>Alignment and Quantification of IMRAS study</title>
+
+<script src="data:application/x-javascript;base64,JChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKXsKICAgICQoJ1tkYXRhLXRvZ2dsZT0idG9vbHRpcCJdJykudG9vbHRpcCgpOwogICAgJCgnW2RhdGEtdG9nZ2xlPSJwb3BvdmVyIl0nKS5wb3BvdmVyKCk7Cn0pOwo="></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20800px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%2020px%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%200%3B%0Apadding%3A%204px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%3Anot%28%5Bclass%5D%29%20%7B%0Amargin%3A%20auto%3B%0Amin%2Dwidth%3A%2040%25%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%5Bsummary%3D%22R%20argblock%22%5D%20%7B%0Awidth%3A%20100%25%3B%0Aborder%3A%20none%3B%0A%7D%0Atable%3Anot%28%5Bclass%5D%29%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%3Anot%28%5Bclass%5D%29%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%3Anot%28%5Bclass%5D%29%2C%20table%3Anot%28%5Bclass%5D%29%20th%2C%20table%3Anot%28%5Bclass%5D%29%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%3Anot%28%5Bclass%5D%29%20tr%2Eodd%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%2013px%3B%0Apadding%2Dbottom%3A%201px%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f5f5f5%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0A%7D%0Apre%20%7B%0Aoverflow%2Dx%3A%20auto%3B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200%2010px%200%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20white%3B%0Aborder%3A%20%23f5f5f5%201px%20solid%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20code%20%7B%0Acolor%3A%20%23444%3B%0Abackground%2Dcolor%3A%20white%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20monospace%3B%0Afont%2Dsize%3A%2090%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%204px%3B%0Acolor%3A%20%23d14%3B%0Aborder%3A%201px%20solid%20%23e1e1e8%3B%0Awhite%2Dspace%3A%20inherit%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Atable%20%3E%20caption%2C%20div%2Efigure%20p%2Ecaption%20%7B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Atable%20%3E%20caption%20span%2C%20div%2Efigure%20p%2Ecaption%20span%20%7B%0Afont%2Dstyle%3A%20normal%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%200%2010px%3B%0A%7D%0Atable%3Anot%28%5Bclass%5D%29%20%7B%0Amargin%3A%20auto%20auto%2010px%20auto%3B%0A%7D%0Aimg%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0Amax%2Dwidth%3A%20100%25%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f5f5f5%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f5f5f5%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f5f5f5%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Adiv%2Er%2Dhelp%2Dpage%20%7B%0Abackground%2Dcolor%3A%20%23f9f9f9%3B%0Aborder%2Dbottom%3A%20%23ddd%201px%20solid%3B%0Amargin%2Dbottom%3A%2010px%3B%0Apadding%3A%2010px%3B%0A%7D%0Adiv%2Er%2Dhelp%2Dpage%3Ahover%20%7B%0Abackground%2Dcolor%3A%20%23f4f4f4%3B%0A%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Alignment and Quantification of IMRAS study</h1>
+<h4 class="author"><em>Carl Murie</em></h4>
+<h4 class="date"><em>2018-08-31</em></h4>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#phenotype-information">Phenotype information</a></li>
+<li><a href="#processing-code">Processing code</a></li>
+<li><a href="#technical-replicates">Technical replicates</a></li>
+<li><a href="#list-of-fastq-samples-in-imras-study">List of FASTQ samples in IMRAS study</a></li>
+<li><a href="#session-information">Session information</a></li>
+</ul>
+</div>
+
+<div id="getting-started" class="section level1">
+<h1>Getting started</h1>
+<p>This package contains two data objects:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>IMRAS_counts_Eset</strong> - ExpressionSet containing non-normalized and unfiltered raw read counts (<em>assayData</em>) and experimental design information (<em>phenoData</em>).</p></li>
+<li><p><strong>IMRAS_tpm_Eset</strong> - ExpressionSet containing unfiltered transcript per million, or tpm, (<em>assayData</em>) counts and experimental design information (<em>phenoData</em>).</p></li>
+</ol>
+<p>These data objects can be loaded with the data command (<em>data(IMRAS_counts_Eset)</em>).</p>
+<p>Each row is a gene and each column is a sample in assayData and each row is a sample and each column is a single factor describing the samples. The rows of the phenoData table map to the columns of the assayData.</p>
+<p>An ExpressionSet can be subsetted with standard square bracket notation such as <em>IMRAS_counts_Eset[1:5, 6:10]</em>. This will return an ExpressionSet containing only the subsetted data for both assayData and phenoData and they will retain the correct mapping between the two tables. The assayData can be extracted as a matrix with the exprs command (<em>exprs(IMRAS_counts_Eset)</em>) and the phenoData can be extracted as an AnnotatedDataFrame with the pData command (<em>pData(IMRAS_counts_Eset)</em>).</p>
+<p>For more information on working with ExpressionSets look at the Biobase::ExpressionSet documentation.</p>
+</div>
+<div id="phenotype-information" class="section level1">
+<h1>Phenotype information</h1>
+<p>The following are definitions of each column in the phenoData table in both IMRAS_counts_Eset and IMRAS_tpm_Eset.</p>
+<p>Row names are the fastq sample names.</p>
+<ol style="list-style-type: decimal">
+<li>Sample: fastq sample names</li>
+<li>SAMPLE.NAME: alternative name of fastq sample</li>
+<li>PID: patient ID</li>
+<li>VISIT: visit label</li>
+<li>DAY: day of visit from baseline</li>
+<li>TIME.DESP: description of visit</li>
+<li>uID: label combining PID and DAY</li>
+<li>PROTECTION: protected from malaria (P) or not protected from malaria (NP)</li>
+<li>BATCH: FASTQ files were processed in two batches (Hiseq2000 and BGI)</li>
+<li>IMMUNIZATION: sample was from immunized patient or non-immunized patient</li>
+<li>GROUP: grouping variable. In this case all subjects are in same group.</li>
+<li>INFECTION_DAY: Not applicable to this assay</li>
+<li>RACE: Not applicable to this assay</li>
+<li>SEX: M or F</li>
+<li>STUDY: IMRAS</li>
+<li>numReads: number of reads in this sample’s fastq file</li>
+<li>estAvgReadLength: estimated average read length for this sample’s fastq file</li>
+<li>PercentAligned: percentage of reads aligned to reference transcript index</li>
+<li>AvgSeqQuality_R1: PASS/FAIL on average quality of sequence reads for first fastq file</li>
+<li>AvgSeqQuality_R2: PASS/FAIL on average quality of sequence reads for second fastq file</li>
+</ol>
+</div>
+<div id="processing-code" class="section level1">
+<h1>Processing code</h1>
+<p>265 samples of paired RNASeq fastq files. fastq files were aligned and quantified with the kallisto software and used the Ensemble GRCH38_R91 transcript reference.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(RNASeqPipelineR)
+<span class="kw">library</span>(data.table)
+<span class="kw">library</span>(Biobase)
+<span class="kw">library</span>(kableExtra)
+##library(magrittr)
+
+RUN_KALLISTO &lt;-<span class="st"> </span><span class="ot">FALSE</span>
+
+## create or load project
+PREFIX&lt;-<span class="st">&quot;/shared/silo_researcher/Gottardo_R/cmurie_working/IMRAS2&quot;</span>
+##createProject(project_name = &quot;IMRAS2_RNASeq&quot; ,path = PREFIX, load_from_immport = FALSE)
+<span class="kw">loadProject</span>(<span class="dt">project_dir=</span>PREFIX, <span class="dt">name=</span><span class="st">&quot;IMRAS2_RNASeq&quot;</span>)
+
+## build kallisto index if necessary
+utils_dir &lt;-<span class="st"> &quot;/shared/silo_researcher/Gottardo_R/10_ref_files/Reference_Genome/Homo_sapiens/Ensembl/kallisto/&quot;</span>
+<span class="kw">setGenomeReference</span>(utils_dir, <span class="st">&quot;GRCH38_R91.idx&quot;</span>)
+
+<span class="cf">if</span>(RUN_KALLISTO) {
+    <span class="kw">kallistoAlign</span>(<span class="dt">kallisto_threads=</span><span class="dv">3</span>, <span class="dt">paired=</span><span class="ot">TRUE</span>, <span class="dt">mail=</span><span class="st">&quot;cmurie@fredhutch.org&quot;</span>,
+                  <span class="dt">minutes_requested=</span><span class="dv">1</span>, <span class="dt">slurm=</span><span class="ot">TRUE</span>, <span class="dt">slurm_partition=</span><span class="ot">NULL</span>,
+                  <span class="dt">force=</span><span class="ot">TRUE</span>,
+                  <span class="dt">paired_pattern=</span><span class="kw">c</span>(<span class="st">&quot;_1.fastq&quot;</span>, <span class="st">&quot;_2.fastq&quot;</span>))
+
+    <span class="kw">kallistoAssembleOutput</span>(<span class="dt">paired=</span><span class="ot">TRUE</span>)
+
+    <span class="kw">runFastQC</span>(<span class="dt">ncores=</span><span class="dv">8</span>) 
+    <span class="kw">kallistoAssembleQC</span>(<span class="dt">paired=</span><span class="ot">TRUE</span>, <span class="dt">doAnnotation=</span><span class="ot">TRUE</span>) 
+} ## if RUN_KALLISTO
+
+## remove fastq file with no phenotype data
+outDir &lt;-<span class="st"> </span>RNASeqPipelineR<span class="op">:::</span><span class="kw">getDir</span>(<span class="st">&quot;OUTPUT&quot;</span>)
+pheno &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="kw">paste0</span>(outDir, <span class="st">&quot;/kallisto_Pheno.csv&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>, <span class="dt">data.table=</span><span class="ot">FALSE</span>)
+counts &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="kw">paste0</span>(outDir, <span class="st">&quot;/kallisto_counts.csv&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>,
+                <span class="dt">data.table=</span><span class="ot">FALSE</span>)
+tpm &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="kw">paste0</span>(outDir, <span class="st">&quot;/kallisto_tpms.csv&quot;</span>), <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>, <span class="dt">data.table=</span><span class="ot">FALSE</span>)
+diff &lt;-<span class="st"> </span><span class="kw">setdiff</span>(<span class="kw">colnames</span>(counts)[<span class="op">-</span><span class="dv">1</span>], pheno<span class="op">$</span>Sample)
+
+## remove samples that are lacking phenotype information
+##counts[,diff] &lt;- NULL
+##tpm[,diff] &lt;- NULL
+
+## format for ExpressionSet
+<span class="kw">rownames</span>(pheno) &lt;-<span class="st"> </span>pheno<span class="op">$</span>Sample
+pheno<span class="op">$</span>X &lt;-<span class="st"> </span><span class="ot">NULL</span>
+<span class="kw">rownames</span>(counts) &lt;-<span class="st"> </span>counts<span class="op">$</span>hgnc_symbol
+counts<span class="op">$</span>hgnc_symbol=<span class="ot">NULL</span>
+<span class="kw">rownames</span>(tpm) &lt;-<span class="st"> </span>tpm<span class="op">$</span>hgnc_symbol
+tpm<span class="op">$</span>hgnc_symbol=<span class="ot">NULL</span>
+
+## create and save read values and pheno information as ExpressionSet Rds objects
+IMRAS_counts_Eset &lt;-<span class="st"> </span><span class="kw">ExpressionSet</span>(<span class="dt">assayData=</span><span class="kw">as.matrix</span>(counts),
+                             <span class="dt">phenoData=</span><span class="kw">AnnotatedDataFrame</span>(pheno))
+IMRAS_tpm_Eset &lt;-<span class="st"> </span><span class="kw">ExpressionSet</span>(<span class="dt">assayData=</span><span class="kw">as.matrix</span>(tpm),
+                             <span class="dt">phenoData=</span><span class="kw">AnnotatedDataFrame</span>(pheno))</code></pre></div>
+</div>
+<div id="technical-replicates" class="section level1">
+<h1>Technical replicates</h1>
+<p>Four samples from the first batch sequenced with Hiseq2000 were repeated as technical replicates in the second batch sequenced with BGI.</p>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:center;">
+BGI
+</th>
+<th style="text-align:center;">
+Hiseq2000
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+CL100037161_L02_23
+</td>
+<td style="text-align:center;">
+IMRAS002.26
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+CL100037161_L02_24
+</td>
+<td style="text-align:center;">
+IMRAS002.13
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+CL100037161_L02_25
+</td>
+<td style="text-align:center;">
+IMRAS005.04
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+CL100037161_L02_26
+</td>
+<td style="text-align:center;">
+IMRAS049.34
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="list-of-fastq-samples-in-imras-study" class="section level1">
+<h1>List of FASTQ samples in IMRAS study</h1>
+<p>151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAARABPEI-8<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAABRABPEI-9<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAACRABPEI-11<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAADRABPEI-12<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAERABPEI-13<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAFRABPEI-14<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAGRABPEI-15<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAHRABPEI-16<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAIRABPEI-17<br />
+151212_I137_FCH3WCHBBXX_L1_WHHUMbmpEAAJRABPEI-18<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAAKRABPEI-19<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAALRABPEI-20<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAAMRABPEI-21<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAANRABPEI-23<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAAORABPEI-24<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAAPRABPEI-26<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAAQRAAPEI-27<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAARRABPEI-29<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAASRABPEI-30<br />
+151212_I137_FCH3WCHBBXX_L2_WHHUMbmpEAATRABPEI-31<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABERABPEI-52<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABFRABPEI-53<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABGRABPEI-54<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABHRABPEI-56<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABIRABPEI-57<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABJRABPEI-58<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABKRABPEI-59<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABLRABPEI-60<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABMRABPEI-61<br />
+151212_I137_FCH3WCHBBXX_L3_WHHUMbmpEABNRABPEI-62<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABORABPEI-63<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABPRABPEI-66<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABQRABPEI-67<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABRRABPEI-68<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABSRABPEI-69<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABTRABPEI-70<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABURABPEI-71<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABVRABPEI-72<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABWRAAPEI-73<br />
+151212_I137_FCH3WCHBBXX_L4_WHHUMbmpEABXRAAPEI-75<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEABYRAAPEI-76<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEABZRAAPEI-77<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACARAAPEI-78<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACBRAAPEI-79<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACCRAAPEI-80<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACDRAAPEI-81<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACERAAPEI-82<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACFRAAPEI-83<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACGRAAPEI-84<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACHRAAPEI-85<br />
+151212_I137_FCH3WCHBBXX_L5_WHHUMbmpEACIRABPEI-86<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACJRABPEI-87<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACKRABPEI-88<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACLRABPEI-89<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACMRABPEI-90<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACNRABPEI-91<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACORAAPEI-92<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACPRAAPEI-93<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACQRAAPEI-94<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACRRABPEI-95<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACSRAAPEI-96<br />
+151212_I137_FCH3WCHBBXX_L6_WHHUMbmpEACTRAAPEI-100<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEACURAAPEI-103<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEACVRAAPEI-107<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEACWRAAPEI-108<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEACXRAAPEI-109<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEACYRAAPEI-110<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEACZRABPEI-112<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEADARAAPEI-113<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEADBRABPEI-127<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEADCRABPEI-128<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEADDRAAPEI-129<br />
+151212_I137_FCH3WCHBBXX_L7_WHHUMbmpEADERABPEI-130<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEAAURABPEI-32<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEAAVRABPEI-33<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEAAWRABPEI-34<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEAAXRABPEI-35<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEAAYRABPEI-37<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEAAZRABPEI-43<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEABARAAPEI-45<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEABBRABPEI-46<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEABCRABPEI-47<br />
+151212_I137_FCH3WCHBBXX_L8_WHHUMbmpEABDRBAPEI-50<br />
+CL100032511_L01_10<br />
+CL100032511_L01_11<br />
+CL100032511_L01_12<br />
+CL100032511_L01_13<br />
+CL100032511_L01_14<br />
+CL100032511_L01_15<br />
+CL100032511_L01_16<br />
+CL100032511_L01_9<br />
+CL100032511_L02_17<br />
+CL100032511_L02_18<br />
+CL100032511_L02_19<br />
+CL100032511_L02_20<br />
+CL100032511_L02_21<br />
+CL100032511_L02_22<br />
+CL100032511_L02_23<br />
+CL100032511_L02_24<br />
+CL100032513_L01_33<br />
+CL100032513_L01_34<br />
+CL100032513_L01_35<br />
+CL100032513_L01_36<br />
+CL100032513_L01_37<br />
+CL100032513_L01_38<br />
+CL100032513_L01_39<br />
+CL100032513_L01_40<br />
+CL100032513_L02_1<br />
+CL100032513_L02_2<br />
+CL100032513_L02_3<br />
+CL100032513_L02_4<br />
+CL100032513_L02_5<br />
+CL100032513_L02_6<br />
+CL100032513_L02_7<br />
+CL100032513_L02_8<br />
+CL100032516_L01_1<br />
+CL100032516_L01_2<br />
+CL100032516_L01_3<br />
+CL100032516_L01_4<br />
+CL100032516_L01_5<br />
+CL100032516_L01_6<br />
+CL100032516_L01_7<br />
+CL100032516_L01_8<br />
+CL100032516_L02_10<br />
+CL100032516_L02_11<br />
+CL100032516_L02_12<br />
+CL100032516_L02_13<br />
+CL100032516_L02_14<br />
+CL100032516_L02_15<br />
+CL100032516_L02_16<br />
+CL100032516_L02_9<br />
+CL100032976_L01_17<br />
+CL100032976_L01_18<br />
+CL100032976_L01_19<br />
+CL100032976_L01_20<br />
+CL100032976_L01_21<br />
+CL100032976_L01_22<br />
+CL100032976_L01_23<br />
+CL100032976_L01_24<br />
+CL100032976_L02_25<br />
+CL100032976_L02_26<br />
+CL100032976_L02_27<br />
+CL100032976_L02_28<br />
+CL100032976_L02_29<br />
+CL100032976_L02_30<br />
+CL100032976_L02_31<br />
+CL100032976_L02_32<br />
+CL100033483_L01_1<br />
+CL100033483_L01_2<br />
+CL100033483_L01_3<br />
+CL100033483_L01_4<br />
+CL100033483_L01_5<br />
+CL100033483_L01_6<br />
+CL100033483_L01_7<br />
+CL100033483_L01_8<br />
+CL100033483_L02_10<br />
+CL100033483_L02_11<br />
+CL100033483_L02_12<br />
+CL100033483_L02_13<br />
+CL100033483_L02_14<br />
+CL100033483_L02_15<br />
+CL100033483_L02_16<br />
+CL100033483_L02_9<br />
+CL100033556_L01_17<br />
+CL100033556_L01_18<br />
+CL100033556_L01_19<br />
+CL100033556_L01_20<br />
+CL100033556_L01_21<br />
+CL100033556_L01_22<br />
+CL100033556_L01_23<br />
+CL100033556_L01_24<br />
+CL100033556_L02_25<br />
+CL100033556_L02_26<br />
+CL100033556_L02_27<br />
+CL100033556_L02_28<br />
+CL100033556_L02_29<br />
+CL100033556_L02_30<br />
+CL100033556_L02_31<br />
+CL100033556_L02_32<br />
+CL100033945_L02_33<br />
+CL100033945_L02_34<br />
+CL100033945_L02_35<br />
+CL100033945_L02_36<br />
+CL100033945_L02_37<br />
+CL100033945_L02_38<br />
+CL100033945_L02_39<br />
+CL100033945_L02_40<br />
+CL100033946_L01_1<br />
+CL100033946_L01_2<br />
+CL100033946_L01_3<br />
+CL100033946_L01_4<br />
+CL100033946_L01_5<br />
+CL100033946_L01_6<br />
+CL100033946_L01_7<br />
+CL100033946_L01_8<br />
+CL100033946_L02_10<br />
+CL100033946_L02_11<br />
+CL100033946_L02_12<br />
+CL100033946_L02_13<br />
+CL100033946_L02_14<br />
+CL100033946_L02_15<br />
+CL100033946_L02_16<br />
+CL100033946_L02_9<br />
+CL100034594_L01_17<br />
+CL100034594_L01_18<br />
+CL100034594_L01_19<br />
+CL100034594_L01_20<br />
+CL100034594_L01_21<br />
+CL100034594_L01_22<br />
+CL100034594_L01_23<br />
+CL100034594_L01_24<br />
+CL100034594_L02_10<br />
+CL100034594_L02_11<br />
+CL100034594_L02_12<br />
+CL100034594_L02_13<br />
+CL100034594_L02_14<br />
+CL100034594_L02_15<br />
+CL100034594_L02_16<br />
+CL100034594_L02_9<br />
+CL100037159_L01_17<br />
+CL100037159_L01_18<br />
+CL100037159_L01_19<br />
+CL100037159_L01_20<br />
+CL100037159_L01_21<br />
+CL100037159_L01_22<br />
+CL100037159_L01_23<br />
+CL100037159_L01_24<br />
+CL100037159_L02_25<br />
+CL100037159_L02_26<br />
+CL100037159_L02_27<br />
+CL100037159_L02_28<br />
+CL100037159_L02_29<br />
+CL100037159_L02_30<br />
+CL100037159_L02_31<br />
+CL100037159_L02_32<br />
+CL100037160_L01_33<br />
+CL100037160_L01_34<br />
+CL100037160_L01_35<br />
+CL100037160_L01_36<br />
+CL100037160_L01_37<br />
+CL100037160_L01_38<br />
+CL100037160_L01_39<br />
+CL100037160_L01_40<br />
+CL100037160_L02_1<br />
+CL100037160_L02_2<br />
+CL100037160_L02_3<br />
+CL100037160_L02_4<br />
+CL100037160_L02_5<br />
+CL100037160_L02_6<br />
+CL100037160_L02_7<br />
+CL100037160_L02_8<br />
+CL100037161_L01_10<br />
+CL100037161_L01_11<br />
+CL100037161_L01_12<br />
+CL100037161_L01_13<br />
+CL100037161_L01_14<br />
+CL100037161_L01_15<br />
+CL100037161_L01_16<br />
+CL100037161_L01_9<br />
+CL100037161_L02_17<br />
+CL100037161_L02_18<br />
+CL100037161_L02_19<br />
+CL100037161_L02_20<br />
+CL100037161_L02_21<br />
+CL100037161_L02_22<br />
+CL100037161_L02_23<br />
+CL100037161_L02_24<br />
+CL100037161_L02_25<br />
+CL100037161_L02_26</p>
+</div>
+<div id="session-information" class="section level1">
+<h1>Session information</h1>
+<pre><code>## R version 3.5.0 (2018-04-23)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 14.04.5 LTS
+## 
+## Matrix products: default
+## BLAS/LAPACK: /app/easybuild/software/OpenBLAS/0.2.18-GCC-5.4.0-2.26-LAPACK-3.6.1/lib/libopenblas_prescottp-r0.2.18.so
+## 
+## locale:
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] kableExtra_0.9.0        Biobase_2.40.0          BiocGenerics_0.26.0    
+## [4] data.table_1.11.4       RNASeqPipelineR_0.33    DataPackageR_0.15.3.900
+## [7] IMRASPackage_1.0        devtools_1.13.6         BiocInstaller_1.30.0   
+## 
+## loaded via a namespace (and not attached):
+##  [1] httr_1.3.1           tidyr_0.8.0          viridisLite_0.3.0   
+##  [4] bit64_0.9-7          assertthat_0.2.0     highr_0.6           
+##  [7] stats4_3.5.0         blob_1.1.1           SRAdb_1.42.2        
+## [10] yaml_2.1.19          progress_1.1.2       pillar_1.2.2        
+## [13] RSQLite_2.1.1        backports_1.1.2      glue_1.3.0          
+## [16] limma_3.36.1         digest_0.6.16        rvest_0.3.2         
+## [19] colorspace_1.3-2     htmltools_0.3.6      plyr_1.8.4          
+## [22] clisymbols_1.2.0     GEOquery_2.48.0      XML_3.98-1.11       
+## [25] pkgconfig_2.0.1      biomaRt_2.36.0       purrr_0.2.4         
+## [28] scales_1.0.0         git2r_0.21.0         tibble_1.4.2        
+## [31] IRanges_2.14.6       ggplot2_3.0.0        usethis_1.4.0       
+## [34] withr_2.1.2          lazyeval_0.2.1       magrittr_1.5        
+## [37] crayon_1.3.4         memoise_1.1.0        evaluate_0.10.1     
+## [40] fs_1.2.6             xml2_1.2.0           rsconnect_0.8.8     
+## [43] tools_3.5.0          prettyunits_1.0.2    hms_0.4.2           
+## [46] formatR_1.5          stringr_1.3.1        S4Vectors_0.18.1    
+## [49] munsell_0.5.0        AnnotationDbi_1.42.1 lambda.r_1.2.2      
+## [52] bindrcpp_0.2.2       compiler_3.5.0       rlang_0.2.2         
+## [55] futile.logger_1.4.3  grid_3.5.0           RCurl_1.95-4.10     
+## [58] rstudioapi_0.7       bitops_1.0-6         rmarkdown_1.9       
+## [61] codetools_0.2-15     gtable_0.2.0         DBI_1.0.0           
+## [64] roxygen2_6.1.0       curl_3.2             R6_2.2.2            
+## [67] knitr_1.20           dplyr_0.7.4          bit_1.1-12          
+## [70] bindr_0.1.1          commonmark_1.5       rprojroot_1.3-2     
+## [73] futile.options_1.0.1 readr_1.1.1          desc_1.2.0          
+## [76] stringi_1.2.4        Rcpp_0.12.18</code></pre>
+</div>
+
+<script type="text/javascript">
+window.onload = function() {
+  var i, fig = 1, caps = document.getElementsByClassName('caption');
+  for (i = 0; i < caps.length; i++) {
+    var cap = caps[i];
+    if (cap.parentElement.className !== 'figure' || cap.nodeName !== 'P')
+      continue;
+    cap.innerHTML = '<span>Figure ' + fig + ':</span> ' + cap.innerHTML;
+    fig++;
+  }
+  fig = 1;
+  caps = document.getElementsByTagName('caption');
+  for (i = 0; i < caps.length; i++) {
+    var cap = caps[i];
+    if (cap.parentElement.nodeName !== 'TABLE') continue;
+    cap.innerHTML = '<span>Table ' + fig + ':</span> ' + cap.innerHTML;
+    fig++;
+  }
+}
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
